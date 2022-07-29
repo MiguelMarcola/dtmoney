@@ -27,11 +27,17 @@
 Em DEV as variáveis de ambiente devem ser as seguintes:
 
 CLIENT_ID=`dba3a8db-fa54-40e0-8bab-7bfb9b6f2e2e`
+
 CLIENT_SECRET=`D/ilRsfoqHlSUChwAMnlyKdDNd7FMsM7cU/vo02REag=`
+
 BASE_URL = `https://mpisandbox.braspag.com.br/v2/auth/token`
+
 ESTABLISHMENT_CODE= `1108578265`
+
 MCC= `6300`
+
 MERCHANT_NAME= `Brasilcap`
+
 
 
 ## Variáveis de ambiente PRODUÇÃO
