@@ -45,9 +45,15 @@ MERCHANT_NAME= `Brasilcap`
 Em Produção as variáveis de ambiente devem ser as seguintes:
 
 CLIENT_ID = `5198eba7-d4ce-4298-a108-b26a19cfab78`
+
 CLIENT_SECRET = `o282GF3f5ZA2Li6W3cafqi/4nkiqCoOpBZ8kGDILxzI`
+
 BASE_URL = `https://mpi.braspag.com.br/v2/auth/token`
+
 ESTABLISHMENT_CODE= `1108578265`
+
 MCC= `6300`
+
 MERCHANT_NAME= `Brasilcap`
+
 
