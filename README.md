@@ -1,47 +1,47 @@
-# Getting Started with Create React App      
- 
+# Requisições da Lambda
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- A lambda deve ser acionada via GET sem body
 
-## Available Script
+- Deve ser passado na requisição um header x-api-key com o valor do token do Doadin
 
-In the project directory, you can run 
+# Retorno da Lamda
 
-### `yarn start`
- 
-Runs the app in the development mode.\ 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- A lambda irá retornar um access_token no seguinte formato
 
-The page will reload if you make edits.\              
-You will also see any lint errors in the console.  
- 
-### `yarn test`
+```json
+{
+	"access_token": "token",
+	"token_type": "bearer",
+	"expires_in": 86399
+}
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Configurações da Lambda
 
-### `yarn build`
+- A lambda deve ser acionada pelo método GET
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- A lambda deve ter variáveis de ambiente diferente para rodar em DEV e em Produção
 
-The build is minified and the filenames include the ha shes.\
-Your app is ready to be deployed!
+## Variáveis de ambiente DEV
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Em DEV as variáveis de ambiente devem ser as seguintes:
 
-### `yarn eject`
+CLIENT_ID=`dba3a8db-fa54-40e0-8bab-7bfb9b6f2e2e`
+CLIENT_SECRET=`D/ilRsfoqHlSUChwAMnlyKdDNd7FMsM7cU/vo02REag=`
+BASE_URL = `https://mpisandbox.braspag.com.br/v2/auth/token`
+ESTABLISHMENT_CODE= `1108578265`
+MCC= `6300`
+MERCHANT_NAME= `Brasilcap`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.  
+## Variáveis de ambiente PRODUÇÃO
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Em Produção as variáveis de ambiente devem ser as seguintes:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+CLIENT_ID = `5198eba7-d4ce-4298-a108-b26a19cfab78`
+CLIENT_SECRET = `o282GF3f5ZA2Li6W3cafqi/4nkiqCoOpBZ8kGDILxzI`
+BASE_URL = `https://mpi.braspag.com.br/v2/auth/token`
+ESTABLISHMENT_CODE= `1108578265`
+MCC= `6300`
+MERCHANT_NAME= `Brasilcap`
 
-## Learn More.   
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).           
